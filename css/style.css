@@ -1,0 +1,430 @@
+@charset "UTF-8";
+/* Scss Document */
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+/*---------------------------------
+全ページ共通
+---------------------------------*/
+
+body {
+  font-family: 'Noto Sans JP',"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: rgb(158, 79, 93);
+  line-height: 1.6;
+  letter-spacing: 1px;
+  height: 100%;
+  background-color: #f4b9b9; }
+/*左端のカラーライン*/
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 32px;/*幅*/
+    height: 100%;
+    background-color: #be6e6e;/*色*/
+    z-index: -1; }
+
+/*文字関連*/
+p {
+  margin: 16px 0; }
+
+/*リンク*/
+a {
+  color: #333;
+  transition: 0.2s; }
+
+a:hover {
+  opacity: 0.6;
+  transition: 0.2s; }
+
+h1, h2, h3 {
+  padding-top: 4px;
+  font-family: "Coda", "sans-serif"; }
+
+h2 {
+  font-size: 3rem;
+  color: #fffffc; }
+
+h3 {
+  margin: 24px 0 8px;
+  padding-left: 8px;
+  border-left: 8px solid #4e4449; }
+
+em {
+  text-decoration: underline;
+  font-style: normal; }
+
+ul, ol, dl {
+  margin: 24px 0; }
+
+/*ボタン関連*/
+input {
+  width: 50%;
+  border: none;
+  background-color: rgba(36, 19, 13, 0.05);
+  margin-bottom: 8px;
+  padding: 4px; }
+
+input[type="submit"] {
+  width: auto;
+  cursor: pointer; }
+input[type="submit"]:hover {
+  opacity: 0.8;
+  transition: 0.2s; }
+
+.btn {
+  background-color: #fbe8e9;
+  border: 1px solid #f8b9f3;
+  margin: 16px 0;
+  padding: 4px 8px;
+  color: #fffffc;
+  border-radius: 8px; }
+
+a.btn {
+  text-decoration: none;
+  color: #fffffc; }
+
+/*テキストエリア*/
+textarea {
+  padding: 4px;
+  background-color: rgba(36, 19, 13, 0.05);
+  border: 0; }
+
+/*２カラム*/
+.wrapper {
+  display: flex; }
+  @media screen and (max-width: 1023px) {
+    .wrapper {
+      display: block; } }
+
+/*角丸のボックス*/
+.box {
+  background-color: #fffffc;
+  border-radius: 16px; }
+
+/*グリッドのリスト*/
+.gridlist {
+  display: grid;
+  grid-template-columns: auto 1fr; }
+  .gridlist dt {
+    position: relative;
+    padding-right: 8px;
+    margin-bottom: 8px; }
+    .gridlist dt::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -16px;
+      top: 6px;
+      width: 0;
+      height: 0;
+      border: 6px solid #4e4449;
+      border-color: transparent transparent transparent #4e4449; }
+  .gridlist dd {
+    padding-left: 32px; }
+
+.hr{
+  margin: 64px;
+}
+/*---------------------------------
+PC用横幅設定
+---------------------------------*/
+@media screen and (min-width: 1024px) {
+  header, footer {
+    width: 1024px;
+    margin: 0 auto; } }
+
+/*---------------------------------
+ヘッダー
+---------------------------------*/
+  @media screen and (min-width: 1024px) {
+    header {
+      display: flex;
+      justify-content: space-between; } }
+/*サイト名*/
+  header h1 {
+    margin: 24px 0;
+    font-size: 4rem; }
+    header h1 a {
+      color: #fffffc;
+      text-decoration: none; }
+    @media screen and (max-width: 1023px) {
+      header h1 {
+        margin: 32px 0 0;
+        text-align: center; } }
+
+/*メニュー*/
+.globalnav ul {
+  display: flex;
+  list-style: none;
+  margin: 40px 0 32px;
+  padding: 0; }
+  @media screen and (max-width: 1023px) {
+    .globalnav ul {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 16px;
+      margin: 32px 0; } }
+  .globalnav ul li {
+    font-weight: 700;
+    padding: 0 24px; }
+    @media screen and (max-width: 1023px) {
+      .globalnav ul li {
+        padding: 0; } }
+    .globalnav ul li a {
+      color: #fffffc;
+      text-decoration: none; }
+
+/*---------------------------------
+メイン
+---------------------------------*/
+/*２カラム　横幅設定*/
+  @media screen and (min-width: 1024px) {
+    main {
+      width: 1048px;
+      margin: 24px auto; }
+      main .left {
+        width: 675px;
+        margin-right: 32px; } }
+  @media screen and (max-width: 1023px) {
+    main {
+      padding: 0 8px; }
+      main .left {
+        width: 100%; } }
+
+/*右側　サイドバー*/
+  main .right {
+    width: 318px;
+    color: #fffffc; }
+    @media screen and (max-width: 1023px) {
+      main .right {
+        width: 100%; } }
+    main .right a {
+      color: #fffffc; }
+    main .right h3 {
+      margin-top: 32px;
+      color: #fffffc;
+      border: none; }
+
+
+/*セクション内の設定*/
+  main section {
+    margin-bottom: 32px; }
+    main section .box {
+      margin: 32px 0;
+      padding: 24px; }
+      main section .box h2 {
+        margin: 0 -24px 32px;
+        padding-left: 24px;
+        background-color: #933f3f; }
+      main section .box > h3 {
+        margin-top: 8px; }
+
+/*更新内容*/
+  main .news ul {
+    list-style: none;
+    padding: 0;
+    height: 100px;
+    overflow-y: auto; }
+    main .news ul li {
+      padding: 4px;
+      border-bottom: 1px solid #4e4449; }
+
+/*COMIC*/
+  main #comic ul {
+    list-style: none;
+    padding: 0; }
+    main #comic ul li {
+      margin-top: 24px; }
+
+/*Profile*/
+  main .prof-left {
+    min-width: 294px;
+    text-align: center; }
+    main .prof-left img {
+      margin: 24px auto;
+      border-radius: 50%; }
+  main .prof-right .sns {
+    display: flex;
+    justify-content: flex-start;
+    margin: 32px 0; }
+    main .prof-right .sns a img {
+      transition: 0.2s; }
+      main .prof-right .sns a img:hover {
+        opacity: 0.6;
+        transition: 0.2s; }
+    main .prof-right .sns i {
+      font-size: 30px;
+      margin-left: 16px; }
+    main .prof-right .sns .pixiv img {
+      border-radius: 0;
+      margin: 0; }
+    main .prof-right .sns .twitter i {
+      color: #55acee; }
+    main .prof-right .sns .facebook i {
+      color: #315096; }
+    main .prof-right .sns .instagram i {
+      color: #e1306c; }
+
+/*LINK*/
+  main #link ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0; }
+    main #link ul li {
+      margin-right: 8px;
+      margin-bottom: 8px; }
+
+/*CONTACT*/
+  main textarea {
+    width: 100%;
+    height: 100px; }
+
+/*---------------------------------
+フッター
+---------------------------------*/
+footer {
+  text-align: center; }
+
+/*クレジット*/
+  footer small {
+    color: #fffffc;
+    padding: 16px 0; }
+  footer a {
+    color: #fffffc; }
+
+/*トップへのボタン*/
+  footer .totop {
+    display: none;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background-color: #4e4449;
+    border-radius: 8px; }
+    @media screen and (max-width: 1023px) {
+      footer .totop {
+        right: 5px;
+        bottom: 5px; } }
+    footer .totop i {
+      font-size: 2rem;
+      margin: 8px; }
+
+/*---------------------------------
+漫画ページ
+---------------------------------*/
+body.comic {
+  background-color: #fffffc; }
+  @media screen and (max-width: 1023px) {
+    body.comic::before {
+      display: none; } }
+
+main {
+  position: relative; }
+
+/*左側　メニュー*/
+.comic-left {
+  position: fixed;
+  top: 24px;
+  width: 256px;
+  margin-right: 32px;}
+
+/*目次ボタン*/
+  .comic-left .mokujibtn {
+    position: absolute;
+    bottom: 16px;
+    left: -42px;/*スマホでの表示がずれるようであれば、-56pxくらいに変更してみてください*/
+    width: 42px;
+    display: inline-block;
+    background-color: #4e4449;
+    padding: 8px;
+    color: #fffffc;
+    border-radius: 8px 0 0 8px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl; }
+    @media screen and (min-width: 1024px) {
+      .comic-left .mokujibtn {
+        display: none; } }
+
+/*目次*/
+  .comic-left ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 24px; }
+    .comic-left ul li {
+      margin-right: 16px; }
+      .comic-left ul li a {
+        text-decoration: none; }
+  @media screen and (max-width: 1023px) {
+    .comic-left {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #4e4449;
+      z-index: 2;
+      margin: 0;
+      transform: translateX(100%);
+      transition: 0.5s; }
+      .comic-left.active {
+        transform: translateX(0%);
+        transition: 0.5s; }
+      .comic-left ul {
+        display: block;
+        height: calc(100% - 134px);/*目次のバナー画像の高さの分だけ100%からマイナスしてください*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 16px; }
+        .comic-left ul li{
+          margin: 16px; }
+        .comic-left ul li a {
+          color: #fffffc; } }
+
+@media screen and (max-width: 1023px) {
+  .overlay {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 252, 0.8);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s; }
+    .overlay.active {
+      opacity: 1;
+      transition: 0.5s; } }
+
+/*右側　漫画*/
+.comic-right {
+  padding-bottom: 40px; }
+  @media screen and (min-width: 1024px) {
+    .comic-right {
+      width: 736px;
+      margin-left: 288px; } }
+
+  .comic-right img {
+    margin: 24px auto; }
+    @media screen and (max-width: 1023px) {
+      .comic-right img {
+        margin: 8px auto; }
+      .comic-right p {
+        padding: 0 40px 40px; } }
+
+/*前へ　次へボタンの配置*/
+  .comic-right .wrapper {
+    justify-content: space-around; }
+    @media screen and (max-width: 1023px) {
+      .comic-right .wrapper {
+        display: flex; } }
