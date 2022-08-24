@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+<title>きらぴの・HP</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Coda:800|Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  
+ 
+  <!--ヘッダー-->
+  <header>
+    <!--サイト名-->
+    <h1><a href="index.html">きらぴの・HP</a></h1>
+    <!--メニュー-->
+    <nav class="globalnav">
+      <ul>
+        <li><a href="index.html#comic">COMIC</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="sample.html">SAMPLE</a></li>
+        <li><a href="index.html#link">LINK</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header><!--ヘッダーここまで-->
+  
+  <!--メイン-->
+  <main class="wrapper">
+  
+      <!--左側-->
+      <div class="left">
+        <section>
+          <div class="box">
+             <!--ABOUT-->
+        <section id="about"> 
+          <div class="box">
+            <h2>ABOUT</h2>
+            <p>サイトの説明文などを記載いただくと良いかと思います。長文を記載すると折り返します。</p>
+
+            <!--プロフィール-->
+            <h3>Profile</h3>
+            <div class="wrapper">
+              <div class="prof-left">
+                <img src="../img/purohu.png" alt="プロフ画像">              
+              </div>
+              <div class="prof-right">
+                <p>きらぴの</p>  
+                <p>きらぴのです。<br>
+                趣味で絵を描いたりします。</p>                
+                <!--SNSアイコン-->
+                <ul class="sns">
+                <li class="pixiv"><a href="https://www.pixiv.net/users/70607721"><img src="../img/logo_icon_r.png" alt="ピクシブアイコン"></a></li>
+                <li class="twitter"><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                <li class="facebook"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="poipiku"><a href="https://poipiku.com/3767029/"><img src="../img/logo_icon_pi.png" alt="ポイピクアイコン"></a></li>
+              </ul>                 
+              </div>            
+            </div>
+          </div>
+        </section><!--ABOUTここまで-->
+
+
+          </div>
+        </section>
+      </div><!--左側ここまで-->
+
+      <!--右側-->
+      <div class="right">  
+        <section>
+          <div class="box">
+          <p>右側です</p>
+        </div>
+        </section>
+    </div>
+      <!--右側ここまで-->
+    
+  </main>
+  
+  <!--フッター-->
+  <footer>
+    <!--クレジット-->
+    <small>&copy; 2022 きらぴの.Design by <a href="https://utsusemi.hiroec.com/" target="_blank">Utsusemi</a>.</small>
+    <!--トップへ -->
+    <a href="#"><div class="totop"><i class="fas fa-arrow-up"></i></div></a>
+  </footer>
+  
+  
+  <!--jQuery 読込-->	
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  
+    
+  <!-- スムーススクロール -->
+  <script type="text/javascript">
+    $(function() {
+      var width = $(window).width();
+      $('a[href*="#"]').click(function() {
+        var speed = 400;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({
+          scrollTop: position
+        }, speed, 'swing');
+        return false;
+      });
+    });
+  </script><!-- スムーススクロールここまで -->
+  
+  <!--トップへボタンの表示-->
+  <script type="text/javascript">
+    $(function(){
+      $(window).on('load scroll', function(){
+        if ($(window).scrollTop() > 200) {
+          $('.totop').fadeIn(400);
+         } else {
+          $('.totop').fadeOut(400);
+         }
+       });    
+    });
+  </script>
+
+  
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+<title>サイト名を入れてください</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:300+JP&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+</head>
+
+<body class="comic">
+  
+  <main>
+    <div class="comic-left">
+      <div class="mokujibtn">
+        <span>目次</span>
+      </div>
+      <img src="http://placehold.jp/254x134.png?text=バナー" alt="作品バナー">
+      <ul>
+        <li><a href="1.html">第1話</a></li>
+        <li><a href="1.html">第2話</a></li>
+        <li><a href="1.html">第3話</a></li>
+        <li><a href="1.html">第4話</a></li>
+        <li><a href="1.html">第5話</a></li>
+        <li><a href="1.html">第6話</a></li>
+        <li><a href="1.html">第7話</a></li>
+        <li><a href="1.html">第8話</a></li>
+        <li><a href="1.html">第9話</a></li>
+        <li><a href="1.html">第10話</a></li>
+        <li><a href="1.html">第11話</a></li>
+        <li><a href="1.html">第12話</a></li>
+        <li><a href="1.html">第13話</a></li>
+        <li><a href="1.html">第14話</a></li>
+        <li><a href="1.html">第15話</a></li>
+        <li><a href="1.html">第16話</a></li>
+      </ul>
+    </div>
+    <div class="overlay"></div> 
+    <div class="comic-right">
+      <img src="img/purohu.png" alt="">
+      <h3>あらすじ</h3>
+      <p>私は当時どうもその学問心というもののためを見なけれで。とうていその間を参考学はもちその応用なですだけをしがいるでがは答弁さませでて、そうにはできるなかっましたまし。手段に折った事は万当時にどうかだだです。とにかく木下さんから戦争その道少々お話にしな事業その模範よそか通用よりとしてお品評なくたでたから、その九月はそれらか女学校首に送らて、岡田さんのものに徳義心の私をちっとも同仕事となるて彼金力に実話に存じように現にお運動をなれなべきて、何だかついに経験を答えませからいだ事をできるんん。</p>
+    </div>
+  </main>
+
+  <!--jQuery 読込-->	
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    
+  <!-- スマホ 漫画ページ目次用 -->
+  <script type="text/javascript">
+    $(function(){
+      $('.mokujibtn').click(function(){
+        $(this).toggleClass('active');
+        if($(this).hasClass('active')){
+          $('.comic-left').addClass('active');
+          $('.overlay').addClass('active');
+        }else{
+          $('.comic-left').removeClass('active');
+          $('.overlay').removeClass('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

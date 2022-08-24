@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale=1, user-scalable=yes">
+<title>きらぴの・HP</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Coda:800|Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  
+ 
+  <!--ヘッダー-->
+  <header>
+    <!--サイト名-->
+    <h1><a href="index.html">きらぴの・HP</a></h1>
+    <!--メニュー-->
+    <nav class="globalnav">
+      <ul>
+        <li><a href="index.html#comic">COMIC</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="sample.html">SAMPLE</a></li>
+        <li><a href="index.html#link">LINK</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header><!--ヘッダーここまで-->
+  
+  <!--メイン-->
+  <main class="wrapper">
+  
+      <!--左側-->
+      <div class="left">
+        <section>
+          <div class="box">
+            <h2>SAMPLE</h2>
+            <p>&lt;section&gt;内&lt;div class="box"&gt;の中に見出しや文字等はいれてください。</p>
+            
+            <div class="hr"></div>
+            
+            <h2>&lt;h2&gt;見出し</h2>
+            <h3>&lt;h3&gt;見出し</h3>
+            <h4>&lt;h4&gt;見出し</h4>
+            
+            <div class="hr"></div>
+            
+            <p><a href="">リンクには下線がつきます</a><br>
+            消したい場合はstyle.CSSの36行目/*リンク*/以下でaタグに<br>text-decoration:none;を追記してください。</p>
+            <p>aタグなどにclass="btn"をつけると、ボタンになります。</p>
+            <a href="" class="btn">ボタン</a>
+            
+            <div class="hr"></div>
+            <input type="text" placeholder="input">
+            <textarea name="" id="" cols="30" rows="10">textarea</textarea>
+            
+            <div class="hr"></div>
+            
+            dlタグなどにclass="gridlist"をつけると、dt（項目）の後ろに三角がつきます。
+            <dl class="gridlist">
+              <dt>項目１</dt>
+              <dd>内容</dd> 
+              <dt>項目２</dt>
+              <dd>内容</dd> 
+              <dt>項目３</dt>
+              <dd>内容</dd>      
+            </dl>
+            
+          </div>
+        </section>
+      </div><!--左側ここまで-->
+
+      <!--右側-->
+      <div class="right">  
+        <section>
+          <h2>&lt;h2&gt;見出し</h2>
+          <h3>&lt;h3&gt;見出し</h3>
+          <p>右側では文字が白なのでclass="box"は不要です。sectionタグの中に文字等を入れてください。</p>
+          
+        </section>
+    </div>
+      <!--右側ここまで-->
+    
+  </main>
+  
+  <!--フッター-->
+  <footer>
+    <!--クレジット-->
+    <small>&copy; 20xx Your Site Name.Design by <a href="https://utsusemi.hiroec.com/" target="_blank">Utsusemi</a>.</small>
+    <!--トップへ -->
+    <a href="#"><div class="totop"><i class="fas fa-arrow-up"></i></div></a>
+  </footer>
+  
+  
+  <!--jQuery 読込-->	
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  
+    
+  <!-- スムーススクロール -->
+  <script type="text/javascript">
+    $(function() {
+      var width = $(window).width();
+      $('a[href*="#"]').click(function() {
+        var speed = 400;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({
+          scrollTop: position
+        }, speed, 'swing');
+        return false;
+      });
+    });
+  </script><!-- スムーススクロールここまで -->
+  
+  <!--トップへボタンの表示-->
+  <script type="text/javascript">
+    $(function(){
+      $(window).on('load scroll', function(){
+        if ($(window).scrollTop() > 200) {
+          $('.totop').fadeIn(400);
+         } else {
+          $('.totop').fadeOut(400);
+         }
+       });    
+    });
+  </script>
+
+  
+</body>
+</html>
